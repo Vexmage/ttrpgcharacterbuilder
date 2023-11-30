@@ -16,6 +16,12 @@ namespace TTRPG_Character_Builder.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+            return View();
+        }
+
+
         // Additional actions can be added here as needed
     }
 }

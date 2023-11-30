@@ -1,5 +1,41 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<TTRPG_Character_Builder.Models.Character>
+
 @{
+    ViewData["Title"] = "Character List";
 }
+
+<h2>Character List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Race</th>
+            <th>Class</th>
+            <th>Strength</th>
+            <th>Dexterity</th>
+            <th>Intelligence</th>
+            <th>Wisdom</th>
+            <th>Constitution</th>
+            <th>Charisma</th>
+            <th>Biography</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var character in Model)
+        {
+            <tr>
+                <td>@character.Name</td>
+                <td>@character.Race</td>
+                <td>@character.Class</td>
+                <td>@character.Strength</td>
+                <td>@character.Dexterity</td>
+                <td>@character.Intelligence</td>
+                <td>@character.Wisdom</td>
+                <td>@character.Constitution</td>
+                <td>@character.Charisma</td>
+                <td>@character.Biography</td>
+            </tr>
+        }
+    </tbody>
+</table>

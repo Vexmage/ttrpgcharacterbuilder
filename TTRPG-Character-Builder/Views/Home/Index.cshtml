@@ -5,7 +5,9 @@
 <div class="text-center">
     <h1 class="display-4">Welcome to TTRPG Character Builder</h1>
     <p>Create, manage, and search for tabletop role-playing game characters.</p>
+    <a class="nav-link" href="@Url.Action("About", "Home")">About</a>
 
     <a class="btn btn-primary btn-lg" href="/Character/Create" role="button">Create Character</a>
-    <a class="btn btn-primary btn-lg" href="/Character/List" role="button">View Characters</a>
+    <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Character")">Character List</a>
+
 </div>

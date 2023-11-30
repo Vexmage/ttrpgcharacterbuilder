@@ -17,8 +17,6 @@ namespace TTRPG_Character_Builder.Models
         [Required]
         public string Class { get; set; }
 
-        // Include other attributes such as Strength, Dexterity, etc.
-
         public int Strength { get; set; }
         public int Dexterity { get; set; }
         public int Intelligence { get; set; }

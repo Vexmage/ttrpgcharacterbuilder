@@ -23,6 +23,13 @@ namespace TTRPG_Character_Builder.Controllers
             return View();
         }
 
+        public async Task<IActionResult> Index()
+        {
+            var characters = await _context.Characters.ToListAsync();
+            return View("List", characters);
+        }
+
+
         // POST: Character/Create
         [HttpPost]
         [ValidateAntiForgeryToken]

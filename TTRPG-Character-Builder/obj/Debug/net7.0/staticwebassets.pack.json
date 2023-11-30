@@ -13,6 +13,26 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\15412\\Documents\\CS295N\\TTRPGCharBuilder\\TTRPG-Character-Builder\\TTRPG-Character-Builder\\wwwroot\\img\\dungeon1.jpg",
+      "PackagePath": "staticwebassets\\img\\dungeon1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\15412\\Documents\\CS295N\\TTRPGCharBuilder\\TTRPG-Character-Builder\\TTRPG-Character-Builder\\wwwroot\\img\\lobericon-at150.png",
+      "PackagePath": "staticwebassets\\img\\lobericon-at150.png"
+    },
+    {
+      "Id": "C:\\Users\\15412\\Documents\\CS295N\\TTRPGCharBuilder\\TTRPG-Character-Builder\\TTRPG-Character-Builder\\wwwroot\\img\\lobericon-at80.png",
+      "PackagePath": "staticwebassets\\img\\lobericon-at80.png"
+    },
+    {
+      "Id": "C:\\Users\\15412\\Documents\\CS295N\\TTRPGCharBuilder\\TTRPG-Character-Builder\\TTRPG-Character-Builder\\wwwroot\\img\\lobericon.ico",
+      "PackagePath": "staticwebassets\\img\\lobericon.ico"
+    },
+    {
+      "Id": "C:\\Users\\15412\\Documents\\CS295N\\TTRPGCharBuilder\\TTRPG-Character-Builder\\TTRPG-Character-Builder\\wwwroot\\img\\lobericon.png",
+      "PackagePath": "staticwebassets\\img\\lobericon.png"
+    },
+    {
       "Id": "C:\\Users\\15412\\Documents\\CS295N\\TTRPGCharBuilder\\TTRPG-Character-Builder\\TTRPG-Character-Builder\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
