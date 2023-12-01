@@ -1,6 +1,13 @@
-﻿@{
+﻿@model TTRPG_Character_Builder.Models.ManageViewModel
+
+@{
     ViewData["Title"] = "Manage Profile";
 }
 
 <h2>Manage Profile</h2>
-<!-- Add form fields to allow users to update their profile information -->
+<form method="post" asp-action="Manage" asp-controller="User">
+    <!-- Add form fields for updating profile information -->
+    <input type="email" asp-for="Email" placeholder="New Email" />
+    <!-- Additional fields as necessary -->
+    <button type="submit">Update Profile</button>
+</form>

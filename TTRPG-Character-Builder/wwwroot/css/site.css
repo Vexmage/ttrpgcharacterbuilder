@@ -91,6 +91,20 @@ table td {
     color: #f8f9fa; /* Slightly lighter color for hover */
 }
 
+/* User info and logout link styles */
+.navbar-custom .user-info,
+.navbar-custom .nav-link.logout {
+    color: #e9ecef; /* Light grey color */
+    padding: 0.5rem 1rem; /* Padding to match other nav links */
+    text-decoration: none; /* No underline */
+}
+
+.navbar-custom .user-info:hover,
+.navbar-custom .nav-link.logout:hover {
+    color: #f8f9fa; /* Slightly lighter color for hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
 .footer {
     background-color: #1b2926; /* Dark background for footer */
     color: #e9ecef; /* Light text color for footer */

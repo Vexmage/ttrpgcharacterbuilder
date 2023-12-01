@@ -38,13 +38,22 @@ namespace TTRPGtests.Models
         {
             var character = new Character
             {
-                // Missing required fields like Name, Race, Class
+                // Omitting the required name, race, and class fields to simulate invalid data
+                Strength = 10,
+                Dexterity = 10,
+                Intelligence = 10,
+                Wisdom = 10,
+                Constitution = 10,
+                Charisma = 10,
+                Biography = "Biography of a character without a name, race, or class."
             };
 
             var validationResults = new List<ValidationResult>();
-            var actual = Validator.TryValidateObject(character, new ValidationContext(character), validationResults, true);
+            var validationContext = new ValidationContext(character, null, null);
+            var actual = Validator.TryValidateObject(character, validationContext, validationResults, true);
 
             Assert.False(actual, "Expected validation to fail with invalid data.");
         }
+
     }
 }

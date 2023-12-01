@@ -53,6 +53,55 @@ namespace TTRPGtests.Controllers
             Assert.Equal(2, model.Count()); // Verify that two characters are returned
         }
 
+        [Fact]
+        public async Task Create_PostAction_ShouldAddCharacter()
+        {
+            // Arrange
+            var newCharacter = new Character { Name = "NewCharacter", Race = "Orc", Class = "Barbarian", Strength = 12, Dexterity = 11, Intelligence = 10, Wisdom = 9, Constitution = 14, Charisma = 8, Biography = "A fierce warrior." };
+
+            // Act
+            var result = await _controller.Create(newCharacter);
+
+            // Assert
+            var redirectToActionResult = Assert.IsType<RedirectToActionResult>(result);
+            Assert.Equal("Index", redirectToActionResult.ActionName);
+            Assert.Equal(3, _context.Characters.Count()); // Assuming there were already 2 characters
+        }
+
+
+        [Fact]
+        public async Task Edit_PostAction_ShouldUpdateCharacter()
+        {
+            // Arrange
+            var characterToUpdate = await _context.Characters.FirstOrDefaultAsync(c => c.Name == "Eilodil");
+            characterToUpdate.Biography = "Updated Biography";
+
+            // Act
+            var result = await _controller.Edit(characterToUpdate.ID, characterToUpdate);
+
+            // Assert
+            var redirectToActionResult = Assert.IsType<RedirectToActionResult>(result);
+            Assert.Equal("Index", redirectToActionResult.ActionName);
+            var updatedCharacter = await _context.Characters.FindAsync(characterToUpdate.ID);
+            Assert.Equal("Updated Biography", updatedCharacter.Biography);
+        }
+
+        [Fact]
+        public async Task DeleteConfirmed_PostAction_ShouldRemoveCharacter()
+        {
+            // Arrange
+            var characterToDelete = await _context.Characters.FirstOrDefaultAsync(c => c.Name == "Dexter");
+
+            // Act
+            var result = await _controller.DeleteConfirmed(characterToDelete.ID);
+
+            // Assert
+            var redirectToActionResult = Assert.IsType<RedirectToActionResult>(result);
+            Assert.Equal("Index", redirectToActionResult.ActionName);
+            Assert.False(_context.Characters.Any(c => c.ID == characterToDelete.ID));
+        }
+
+
         public void Dispose()
         {
             // Clean up the database after each test

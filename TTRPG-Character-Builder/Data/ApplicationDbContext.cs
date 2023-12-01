@@ -11,8 +11,7 @@ namespace TTRPG_Character_Builder.Data
         {
         }
         public DbSet<Character> Characters { get; set; }
-        // Other DbSet properties for your models
-
+        public DbSet<User> Users { get; set; }
 
     }
 }

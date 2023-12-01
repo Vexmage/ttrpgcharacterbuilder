@@ -1,12 +1,13 @@
-﻿@{
+﻿@model TTRPG_Character_Builder.Models.RegisterViewModel
+
+@{
     ViewData["Title"] = "Register";
 }
 
 <h2>Register</h2>
-<form method="post">
-    <!-- Add form fields for username, email, and password -->
-    <input type="text" name="username" placeholder="Username" required />
-    <input type="email" name="email" placeholder="Email" required />
-    <input type="password" name="password" placeholder="Password" required />
+<form method="post" asp-action="Register" asp-controller="User">
+    <input type="text" asp-for="Username" placeholder="Username" required />
+    <input type="email" asp-for="Email" placeholder="Email" required />
+    <input type="password" asp-for="Password" placeholder="Password" required />
     <button type="submit">Register</button>
 </form>
